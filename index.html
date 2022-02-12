@@ -1,0 +1,1160 @@
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>カフェ系専門ホームぺージ制作会社 | ProgCube</title>
+    <meta
+      name="Description"
+      content="地域で知名度NO1に変える方法を知っていますか？ProgCubeではカフェ系のホームぺージを制作し、お店の知名度アップに繋げます。"
+    />
+    <meta
+      name="google-site-verification"
+      content="TQBwdIdVPUeqiPBJYwYcQZt9SyTQkpwDOCyQC0A0oJg"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162165000-4"
+    ></script>
+    <style>
+      /* ALL */
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        margin: 0;
+        font-weight: normal;
+      }
+      a {
+        text-decoration: none;
+      }
+      html {
+        font-size: 18px;
+        font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
+          "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+      }
+      /* iOSでのデフォルトスタイルをリセット */
+      input[type="submit"],
+      input[type="button"] {
+        border-radius: 0;
+        -webkit-box-sizing: content-box;
+        -webkit-appearance: button;
+        appearance: button;
+        border: none;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      input[type="submit"]::-webkit-search-decoration,
+      input[type="button"]::-webkit-search-decoration {
+        display: none;
+      }
+      input[type="submit"]:focus,
+      input[type="button"]:focus {
+        outline-offset: -2px;
+      }
+      /* color定義 */
+      /* 緑っぽい黒 */
+      .bg-01 {
+        background-color: #142126;
+      }
+      .col-01 {
+        color: #142126;
+      }
+      /* オレンジ */
+      .bg-02 {
+        background-color: #bf382c;
+      }
+      .col-02 {
+        color: #bf382c;
+      }
+      /* 白 */
+      .bg-03 {
+        background-color: #e1e1e1;
+      }
+      .col-03 {
+        color: #e1e1e1;
+      }
+      /* 淡い白 */
+      .bg-04 {
+        background-color: #f2eae4;
+      }
+      .col-04 {
+        color: #f2eae4;
+      }
+      /* bold */
+      .f-bold {
+        font-weight: bold;
+      }
+      /* small */
+      .small {
+        font-size: 0.8em;
+      }
+      /* strong */
+      .strong {
+        font-size: 1.8em;
+      }
+      .s-strong {
+        font-size: 1.2em;
+      }
+      /* base */
+      .title {
+        text-align: center;
+      }
+      /* decorate */
+      .decorate-01 {
+        text-align: center;
+        border-top: solid 2px #bf382c;
+        border-bottom: solid 2px #bf382c;
+        padding: 5px;
+        color: #bf382c;
+        font-weight: bold;
+      }
+      /* arrow */
+      .arrow {
+        width: fit-content;
+        transform: rotate(90deg);
+        font-weight: bold;
+        font-size: 60px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      /* header */
+      #HEADERWRAP {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        height: 92px;
+      }
+      #MENUS {
+        font-size: 20px;
+      }
+      #MENUS ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #MENUS li {
+        padding: 30px;
+        cursor: pointer;
+        position: relative;
+      }
+      #MENUS li::after {
+        content: "";
+        position: absolute;
+        top: 90%;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: #bf382c;
+        transition: 0.3s ease-in;
+        opacity: 0.9;
+      }
+      #MENUS li.form-btn::after {
+        background-color: #142126;
+      }
+      #MENUS li:hover:after {
+        width: 100%;
+      }
+      li.form-btn {
+        background-color: #bf382c;
+        color: white;
+      }
+      #LOGO {
+        padding: 0 10px;
+        width: 200px;
+      }
+      #LOGO img {
+        width: 100%;
+        display: block;
+      }
+      /* LOAD */
+      #LOAD {
+        opacity: 0;
+        position: fixed;
+        transition: 0.6s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #142126;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -100;
+      }
+      #LOAD.show {
+        z-index: 1000;
+        opacity: 1;
+      }
+      /* TOP */
+      #TOP {
+        background: url("../wp-content/uploads/img/top.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        max-height: 100vh;
+      }
+      #TOPMENU {
+        width: 38%;
+        background-color: rgba(33, 33, 33, 0.5);
+        margin-left: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      #TOPMENUWRAP {
+        padding-left: 3.6%;
+        box-sizing: border-box;
+      }
+      .mentionbtn {
+        display: inline-block;
+        padding: 10px 40px;
+        border-radius: 35px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      #MENTIONS p {
+        font-size: 20px;
+      }
+      #TOPTITLE {
+        border-left: solid 5px #bf382c;
+        padding-left: 10px;
+      }
+      #TOPTITLE h2 {
+        font-size: 40px;
+      }
+      #TOPTITLE h3 {
+        font-size: 25px;
+      }
+      #MENTIONS {
+        margin-top: 10%;
+      }
+      /* POPULAR */
+      section#POPULAR {
+        text-align: center;
+        position: relative;
+        padding: 150px 0;
+      }
+      section#POPULAR::before {
+        background-color: #bf382c;
+        display: block;
+        width: 1px;
+        content: "";
+        position: absolute;
+        height: 0px;
+        left: 50%;
+        top: 0;
+        transition: 0.8s;
+      }
+      section#POPULAR.show::before {
+        height: 120px;
+      }
+      section#POPULAR p {
+        line-height: 2rem;
+      }
+      section#POPULAR p.spacer {
+        padding: 80px 0 40px;
+      }
+      /* FEATURE */
+      #FEATURE .contents {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        margin: 0 auto;
+      }
+      .contents-parts-wrapper {
+        display: flex;
+        margin: 10px auto;
+      }
+      .contents-parts {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+        padding: 0 10px;
+        transform: scale(0.2);
+        transition: 0.8s;
+      }
+      .contents-parts.show {
+        transform: scale(1);
+      }
+      section#FEATURE {
+        padding: 50px 0;
+      }
+      section#FEATURE .title {
+        margin-bottom: 30px;
+      }
+      .contents-parts-text {
+        flex: 1;
+      }
+      .contents-parts-img {
+        width: 20px;
+        overflow: hidden;
+      }
+      .contents-parts-img img {
+        display: block;
+        width: 100%;
+      }
+      /* PRO */
+      section#PRO {
+        padding: 50px 0;
+      }
+      section#PRO span {
+        white-space: nowrap;
+      }
+      /* RECOMMEND */
+      section#RECOMMEND {
+        padding: 50px 0;
+      }
+      section#RECOMMEND .contents {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+        flex-wrap: wrap;
+      }
+      .contents-img img {
+        display: block;
+        margin: 0 auto;
+      }
+      .contents-des-wrapper {
+        display: flex;
+        margin: 0 auto;
+      }
+      .contents-img {
+        height: 100px;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+      }
+      .contents-des {
+        padding: 0 10px;
+        text-align: center;
+        width: 200px;
+      }
+      /* FORM */
+      section#FORM {
+        padding: 50px 10px;
+      }
+      .form-parts {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+      .form-parts input {
+        width: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        border: solid 1px #142126;
+        border-radius: 30px;
+        font-size: 18px;
+        font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
+          "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+        font-weight: bold;
+      }
+      /* footer */
+      #FOOTWRAP {
+        padding: 30px 0;
+        text-align: center;
+      }
+      /* HUMBURGER */
+      #HUMBURGER {
+        width: 92px;
+        height: 92px;
+        position: relative;
+        display: none;
+        cursor: pointer;
+      }
+      #HUMBURGER span {
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        left: 20%;
+        transition: 0.4s ease-in-out;
+      }
+      .sp-3 {
+        top: 61px;
+      }
+      .sp-2 {
+        top: 45px;
+      }
+      .sp-1 {
+        top: 29px;
+      }
+      .sp-1.show {
+        top: 45px;
+        transform: rotate(225deg);
+      }
+      .sp-2.show {
+        transform: rotate(225deg);
+      }
+      .sp-3.show {
+        top: 45px;
+        transform: rotate(-225deg);
+      }
+      #SHUTTER {
+        position: fixed;
+        transform: translateY(-200px);
+        transition: 0.4s ease-in-out;
+        left: 0;
+        right: 0;
+        z-index: 998;
+      }
+      #SHUTTER.show {
+        transform: translateY(0px);
+      }
+      #SHUTTER li {
+        padding: 12px 0;
+        text-align: center;
+        border-top: solid 1px;
+      }
+      /* alert */
+      .alert {
+        text-align: right;
+        font-size: 16px;
+        color: #dd0000;
+      }
+      /* フォーム */
+      #contactForm span {
+        color: white;
+        font-size: 14px;
+        padding: 0 4px;
+        border-radius: 4px;
+        margin-right: 4px;
+      }
+      span.need {
+        background-color: #bf382c;
+      }
+      span.free {
+        background-color: #142126;
+      }
+      #submitMessage {
+        font-size: 16px;
+        color: #dd0000;
+      }
+      /* NOWONLY */
+      section#NOWONLY {
+        background-image: url(../wp-content/uploads/img/Wall.gif);
+        max-height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left center;
+      }
+      #NOWONLYCONTENT {
+        width: fit-content;
+        margin-left: auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        max-width: 600px;
+        width: 100%;
+      }
+      #NOWONLYCONTENT span {
+        white-space: nowrap;
+      }
+      #NOWONLYCONTENT h2 {
+        border-left: solid 5px #bf382c;
+        padding-left: 10px;
+      }
+      .nowonly-space {
+        margin-top: 40px;
+      }
+      .nowonly-in.desc {
+        text-align: right;
+      }
+      p.cost {
+        text-align: center;
+        margin-top: 30px;
+      }
+      /* btn */
+      input#SUBMIT {
+        background-color: white;
+        transition: 0.4s ease-out;
+        font-size: 16px;
+      }
+      input#SUBMIT:hover {
+        box-shadow: 5px 5px 5px #efefef inset, -5px -5px 5px #8f8f8f inset,
+          -5px 5px 5px #cfcfcf inset, 5px -5px 5px #cfcfcf inset;
+        font-size: 16.5px;
+      }
+      input#SUBMIT:active {
+        box-shadow: 2px 2px 5px #efefef inset, -2px -2px 5px #8f8f8f inset,
+          -2px 2px 5px #cfcfcf inset, 2px -2px 5px #cfcfcf inset;
+        font-size: 16px;
+      }
+      p.message {
+        font-size: 18px;
+        color: #bf382c;
+        text-align: center;
+        font-weight: bold;
+      }
+      /* 06.04追記 */
+      #FEATURE .contents,
+      #RECOMMEND .contents {
+        max-width: 880px;
+      }
+      /* ここまで */
+      @media screen and (max-width: 1200px) {
+        #TOPTITLE h2 {
+          font-size: 34px;
+        }
+        #TOPTITLE h3 {
+          font-size: 22px;
+        }
+        #TOP {
+          margin-top: 92px;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        #TOPTITLE h2 {
+          font-size: 28px;
+        }
+        #TOPTITLE h3 {
+          font-size: 20px;
+        }
+        .mentionbtn {
+          padding: 8px 30px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        #TOPTITLE h2 {
+          font-size: 22px;
+        }
+        #TOPTITLE h3 {
+          font-size: 16px;
+        }
+        #MENUS {
+          display: none;
+        }
+        #HUMBURGER {
+          display: block;
+        }
+        .mentionbtn {
+          padding: 5px 20px;
+          font-size: 16px;
+        }
+        #MENTIONS p {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        #TOPTITLE h2 {
+          font-size: 28px;
+        }
+        #TOPTITLE h3 {
+          font-size: 18px;
+        }
+        #TOPMENU {
+          width: 100%;
+        }
+        #LOGO {
+          width: 160px;
+        }
+        #TOPMENU {
+          justify-content: flex-end;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        section#PRO h2 {
+          font-size: 22px;
+        }
+        html {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        div#MENTIONS {
+          display: none;
+        }
+        .contents-parts {
+          padding: 0 2px;
+          font-size: 16px;
+        }
+        .contents-des p {
+          font-size: 16px;
+        }
+        .contents-des {
+          padding: 0;
+        }
+        section#PRO h2 {
+          font-size: 18px;
+        }
+        #NOWONLYCONTENT {
+          padding: 30px 10px;
+        }
+      }
+      @media screen and (max-width: 380px) {
+        section#PRO h2 {
+          font-size: 16px;
+        }
+        html {
+          font-size: 14px;
+        }
+      }
+      @media screen and (max-width: 350px) {
+        .contents-parts {
+          font-size: 14px;
+        }
+        .contents-des p {
+          font-size: 14px;
+        }
+      }
+    </style>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-162165000-4");
+    </script>
+    <link rel="shortcut icon" href="../wp-content/uploads/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="../wp-content/uploads/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../wp-content/uploads/img/android-chrome-256x256.png"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(window).on("load resize", function () {
+        var width = $("#TOP").width();
+        var goldratio = width / 1.618;
+        $("#TOP").height(goldratio);
+
+        // responsive
+        var widthTemp = $("#FEATURE").width();
+        if (widthTemp <= 500) {
+          $(".contents-parts").css("box-sizing", "");
+          $(".contents-parts").width(widthTemp / 2);
+          $(".contents-parts").css("box-sizing", "border-box");
+
+          $(".contents-des").css("box-sizing", "");
+          $(".contents-des").width(widthTemp / 2);
+          $(".contents-des").css("box-sizing", "border-box");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="HEADERWRAP" class="bg-01 col-03">
+        <div id="LOGO">
+          <h1>
+            <img
+              src="../wp-content/uploads/img/logo.png"
+              alt="カフェ系ホームぺージ制作会社ProgCube"
+            />
+          </h1>
+        </div>
+        <div id="MENUS">
+          <ul>
+            <li class="popular-btn">人気店になるには</li>
+            <li class="nowonly-btn">キャンペーン</li>
+            <li class="form-btn bg-02">無料相談</li>
+          </ul>
+        </div>
+        <div id="HUMBURGER" class="bg-02">
+          <span class="bg-03 sp-1"></span> <span class="bg-03 sp-2"></span>
+          <span class="bg-03 sp-3"></span>
+        </div>
+      </div>
+      <div id="SHUTTER" class="bg-01 col-03">
+        <ul>
+          <li class="popular-btn">人気店になるには</li>
+          <li class="nowonly-btn">キャンペーン</li>
+          <li class="form-btn bg-02">無料相談</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section id="LOAD" class="show">
+        <img src="../wp-content/uploads/img/cup.gif" alt="" />
+      </section>
+      <!-- TOP -->
+      <section id="TOP" class="col-03">
+        <div id="TOPMENU">
+          <div id="TOPMENUWRAP">
+            <div id="TOPTITLE">
+              <h2 class="f-bold">
+                あなたのお店が、<br />
+                地域で<span class="col-02">知名度No1</span>に。
+              </h2>
+              <h3>
+                <span class="col-02 f-bold">「行ってみたい」</span><br />
+                に繋がるサイト作成します。
+              </h3>
+            </div>
+            <div id="MENTIONS">
+              <p>今だけ先着4組85%OFF</p>
+              <div class="mentionbtn bg-02 col-03">
+                <p>詳しくはこちら</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- お店の人気を出すには？ -->
+      <section id="POPULAR" class="reading-line bg-01 col-03">
+        <div class="title col-02">
+          <h2>お店の人気を出すには？</h2>
+        </div>
+        <div class="contents">
+          <p class="spacer">
+            誰もがスマーフォンを使える現代では、<br />
+            Webの使い方が上手いお店は人気店になります。
+          </p>
+          <p>
+            では、Webの使い方が上手いとは<br />
+            どういうことでしょうか？
+          </p>
+        </div>
+      </section>
+      <!-- 人気がでるホームぺージの特徴 -->
+      <section id="FEATURE" class="bg-04 col-01">
+        <div class="title col-02">
+          <h2>人気が出るホームページの特徴</h2>
+        </div>
+        <div class="contents">
+          <div class="contents-parts-wrapper">
+            <div class="contents-parts">
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/before.png" />
+              </div>
+              <div class="contents-parts-text">
+                <p>
+                  行く前から<br />
+                  <span class="col-02">お店の雰囲気</span>が<br />
+                  よくわかる
+                </p>
+              </div>
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/after.png" />
+              </div>
+            </div>
+            <div class="contents-parts">
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/before.png" />
+              </div>
+              <div class="contents-parts-text">
+                <p>
+                  お店の売りが<br />
+                  <span class="col-02">強くアピール</span><br />
+                  されている
+                </p>
+              </div>
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/after.png" />
+              </div>
+            </div>
+          </div>
+          <div class="contents-parts-wrapper">
+            <div class="contents-parts">
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/before.png" />
+              </div>
+              <div class="contents-parts-text">
+                <p>
+                  SNSで<br />
+                  拡散されるくらい<br />
+                  <span class="col-02">サイトがきれい</span>
+                </p>
+              </div>
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/after.png" />
+              </div>
+            </div>
+            <div class="contents-parts">
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/before.png" />
+              </div>
+              <div class="contents-parts-text">
+                <p>
+                  連絡手段や<br />
+                  アクセス方法が<br />
+                  <span class="col-02">分かりやすい</span>
+                </p>
+              </div>
+              <div class="contents-parts-img">
+                <img src="../wp-content/uploads/img/after.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- プロにまかせてみませんか？ -->
+      <section id="PRO" class="bg-01 col-03">
+        <div class="title">
+          <h2>
+            <span class="col-02 f-bold s-strong">「行ってみたい」</span>
+            <span>に繋がる</span> <span>ホームページ、</span>
+            <span class="col-02 f-bold s-strong">カフェサイト制作のプロ</span>
+            <span>に任せてみませんか？</span>
+          </h2>
+        </div>
+      </section>
+      <!-- こういう人にオススメ -->
+      <section id="RECOMMEND" class="bg-04 col-01">
+        <div class="title col-02">
+          <h2>こういう人におすすめ</h2>
+        </div>
+        <div class="contents">
+          <div class="contents-des-wrapper">
+            <div class="contents-des">
+              <div class="contents-img">
+                <img src="../wp-content/uploads/img/sns.png" />
+              </div>
+              <p>
+                お店をより多くの人に<br />
+                知ってもらいたい
+              </p>
+            </div>
+            <div class="contents-des">
+              <div class="contents-img">
+                <img src="../wp-content/uploads/img/user.png" />
+              </div>
+              <p>
+                お客さんを増やしたい！<br />
+                売上を増やしたい！
+              </p>
+            </div>
+          </div>
+          <div class="contents-des-wrapper">
+            <div class="contents-des">
+              <div class="contents-img">
+                <img src="../wp-content/uploads/img/cup.png" />
+              </div>
+              <p>
+                お店の雰囲気が伝わる<br />
+                おしゃれなサイトを<br />
+                作りたい！
+              </p>
+            </div>
+            <div class="contents-des">
+              <div class="contents-img">
+                <img src="../wp-content/uploads/img/down.png" />
+              </div>
+              <p>
+                グルメサイトには<br />
+                掲載しているけど<br />
+                いまいち効果がない
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 制作イメージ -->
+      <!-- 今だけセクション -->
+      <section id="NOWONLY">
+        <div id="NOWONLYCONTENT">
+          <div class="nowonly-in">
+            <div class="nowonly-title">
+              <h2>
+                <span class="col-02">今だけ!</span><br />
+                <span>WEB業界で</span> <span>プロとして</span>
+                <span>活動してきた</span> <span>チームが</span>
+                <span>独立のために</span>
+                <span class="col-02">スタートダッシュ</span>
+                <span class="col-02">キャンペーン開催！</span>
+              </h2>
+              <p class="cost">
+                <span class="col-02 f-bold">
+                  <span class="small">通常</span> 200,000円～
+                </span>
+                <span> が今なら </span>
+                <span class="col-02 f-bold strong"> 30,000円！ </span>
+              </p>
+            </div>
+            <div class="nowonly-space">
+              <p class="decorate-01">まずはお気軽にご相談ください！</p>
+              <div class="arrow col-02">〉</div>
+            </div>
+          </div>
+          <div class="nowonly-in desc">
+            <p>（その他、維持費用が必要です。）</p>
+            <p>（一部条件があります。）</p>
+          </div>
+        </div>
+      </section>
+      <!-- フォーム -->
+      <section id="FORM" class="bg-04 col-01">
+        <div class="title">
+          <h2>お問い合わせフォーム</h2>
+        </div>
+        <form action="" method="post" id="contactForm">
+          <div class="form-parts">
+            <div>
+              <label for="name"><span class="need">必須</span>お名前</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value="<?php echo $name;?>"
+              />
+            </div>
+            <div class="alert">
+              <p></p>
+            </div>
+          </div>
+          <div class="form-parts">
+            <div>
+              <label for="mail"
+                ><span class="need">必須</span>メールアドレス</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                id="mail"
+                name="mail"
+                value="<?php echo $mail;?>"
+              />
+            </div>
+            <div class="alert">
+              <p></p>
+            </div>
+          </div>
+          <div class="form-parts">
+            <div>
+              <label for="tell"><span class="need">必須</span>電話番号</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="tell"
+                name="tell"
+                value="<?php echo $tell;?>"
+              />
+            </div>
+            <div class="alert">
+              <p></p>
+            </div>
+          </div>
+          <div class="form-parts">
+            <div>
+              <label for="shop"><span class="free">任意</span>店舗名</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="shop"
+                name="shop"
+                value="<?php echo $shop;?>"
+              />
+            </div>
+          </div>
+          <div class="form-parts">
+            <div>
+              <label for="time"
+                ><span class="free">任意</span>対応可能時間</label
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                id="time"
+                name="time"
+                value="<?php echo $time;?>"
+              />
+            </div>
+          </div>
+          <div class="form-parts">
+            <div>
+              <p id="submitMessage"></p>
+            </div>
+            <div id="SUBMITWRAP">
+              <input id="SUBMIT" type="submit" value="送信する" />
+            </div>
+          </div>
+          <input type="hidden" name="success" value="1" />
+          <p class="message"></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div id="FOOTWRAP" class="bg-01 col-02">
+        <small>©2020 ProgCube</small>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      // スムーススクロール
+      var speed = 500;
+      var headheight = $("#HEADERWRAP").height();
+      $(".form-btn").click(function () {
+        var position = $("#FORM").offset().top - headheight;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+      });
+      $(".mentionbtn,.nowonly-btn").click(function () {
+        var position = $("#NOWONLY").offset().top - headheight;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+      });
+      $(".popular-btn").click(function () {
+        var position = $("#POPULAR").offset().top - headheight;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+      });
+      // クリックアニメート
+      $("#HUMBURGER").click(function () {
+        $(this).find("span").toggleClass("show");
+        $("#SHUTTER").toggleClass("show");
+      });
+      $("#SHUTTER").click(function () {
+        $(this).removeClass("show");
+        $("#HUMBURGER span").removeClass("show");
+      });
+      // スクロールアニメート
+      let windowSize = $(window).height();
+      $(window).scroll(function () {
+        var nowP = $(this).scrollTop();
+
+        var target = $("#POPULAR").offset().top;
+        if (nowP + (windowSize * 2) / 3 > target) {
+          $("#POPULAR").addClass("show");
+        } else {
+          $("#POPULAR").removeClass("show");
+        }
+
+        var target = $("#FEATURE .contents").offset().top;
+        if (nowP + (windowSize * 4) / 5 > target) {
+          $(".contents-parts").addClass("show");
+        } else {
+          $(".contents-parts").removeClass("show");
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      // メールチェック
+      $("#mail").on("blur", function () {
+        if ($(this).val() == "") {
+          $(this).parent().next(".alert").children("p").text("※必須項目です");
+        } else if (
+          $(this)
+            .val()
+            .match(
+              /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+            )
+        ) {
+          $(this).parent().next(".alert").children("p").text("");
+        } else {
+          $(this)
+            .parent()
+            .next(".alert")
+            .children("p")
+            .text("※メールアドレスが間違っています。");
+        }
+      });
+      // 電話番号チェック
+      $("#tell").on("blur", function () {
+        var telnum = $(this).val().replace(/-/g, "");
+
+        if (telnum == "") {
+          $(this).parent().next(".alert").children("p").text("※必須項目です");
+        } else if (telnum.match(/^(0[5-9]0[0-9]{8}|0[1-9][1-9][0-9]{7})$/)) {
+          $(this).parent().next(".alert").children("p").text("");
+        } else {
+          $(this)
+            .parent()
+            .next(".alert")
+            .children("p")
+            .text("※電話番号が間違っています。");
+        }
+      });
+      // お名前チェック
+      $("#name").on("blur", function () {
+        if ($(this).val() == "") {
+          $(this).parent().next(".alert").children("p").text("※必須項目です");
+        } else {
+          $(this).parent().next(".alert").children("p").text("");
+        }
+      });
+    </script>
+    <!-- 送信時再チェック -->
+    <script type="text/javascript">
+      $("#contactForm").on("submit", function () {
+        // 電話番号
+        var errorFlag = 0;
+        var telnum = $("#tell").val().replace(/-/g, "");
+        if (telnum == "") {
+          $("#tell")
+            .parent()
+            .next(".alert")
+            .children("p")
+            .text("※必須項目です");
+          errorFlag += 1;
+        } else if (telnum.match(/^(0[5-9]0[0-9]{8}|0[1-9][1-9][0-9]{7})$/)) {
+          $("#tell").parent().next(".alert").children("p").text("");
+        } else {
+          $("#tell")
+            .parent()
+            .next(".alert")
+            .children("p")
+            .text("※電話番号が間違っています。");
+          errorFlag += 1;
+        }
+        // メール
+        if ($("#mail").val() == "") {
+          $("#mail")
+            .parent()
+            .next(".alert")
+            .children("p")
+            .text("※必須項目です");
+          errorFlag += 1;
+        } else if (
+          $("#mail")
+            .val()
+            .match(
+              /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+            )
+        ) {
+          $("#mail").parent().next(".alert").children("p").text("");
+        } else {
+          $("#mail")
+            .parent()
+            .next(".alert")
+            .children("p")
+            .text("※メールアドレスが間違っています。");
+          errorFlag += 1;
+        }
+        // お名前
+        if ($("#name").val() == "") {
+          $("#name")
+            .parent()
+            .next(".alert")
+            .children("p")
+            .text("※必須項目です");
+          errorFlag += 1;
+        } else {
+          $("#name").parent().next(".alert").children("p").text("");
+        }
+        // エラーチェック
+        if (!(errorFlag == 0)) {
+          $("#submitMessage").text("入力内容に誤りがあります。");
+          return false;
+        }
+      });
+    </script>
+  </body>
+</html>
